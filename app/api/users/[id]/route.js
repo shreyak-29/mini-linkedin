@@ -1,6 +1,5 @@
 import { connectDB } from "@/lib/db";
-import User from "@/models/User";
-import Post from "@/models/Post";
+import { User, Post } from "@/models";
 import { verifyToken } from "@/lib/auth";
 
 export async function GET(req, { params }) {

@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
 
 const PostSchema = new mongoose.Schema({
-  text: String,
-  author: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  text: { type: String, required: true },
+  author: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
   hashtags: [{ type: String }],
   createdAt: { type: Date, default: Date.now }
+}, {
+  timestamps: true
 });
 
 // Pre-save middleware to extract hashtags from text
@@ -18,4 +20,7 @@ PostSchema.pre('save', function(next) {
   next();
 });
 
-export default mongoose.models.Post || mongoose.model("Post", PostSchema);
+// Ensure the model is only created once
+const Post = mongoose.models.Post || mongoose.model("Post", PostSchema);
+
+export default Post;
