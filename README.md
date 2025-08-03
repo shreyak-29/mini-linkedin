@@ -240,7 +240,6 @@ npm run lint
 **⭐ Star this repo if you like the project!**
 **✅ Ready for deployment.**
 
-```
 
 
 
