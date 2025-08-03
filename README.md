@@ -80,6 +80,7 @@ cd mini-linkedin
 - Real-time feed updates with SWR
 - Optimistic UI updates
 - Professional post cards with timestamps
+- Can view profile of those who posted 
 
 ### 🏷️ **Hashtag System**
 - Automatic hashtag extraction from post text
@@ -93,11 +94,23 @@ cd mini-linkedin
 - View all user posts
 - Professional profile layout
 
+###💬 **Like & Comment Functionality**
+-View like count and comments on all posts
+-Only logged-in users can like or comment
+-Comments show relative time and update instantly
+-Clean, responsive UI with form validation
+
+
+
+
+
+
+
 ## 🚀 Setup Instructions
 
 ### **1. Clone the Repository**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/shreyak-29/mini-linkedin
 cd mini-linkedin
 ```
 
