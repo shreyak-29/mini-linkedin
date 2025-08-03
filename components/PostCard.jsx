@@ -15,7 +15,7 @@ export default function PostCard({ post, onPostUpdate }) {
       if (part.match(hashtagRegex)) {
         return (
           <Link
-            key={index}
+            key={`${part}-${index}`}
             href={`/hashtag/${part.slice(1)}`}
             className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
           >
@@ -23,7 +23,7 @@ export default function PostCard({ post, onPostUpdate }) {
           </Link>
         );
       }
-      return part;
+      return <span key={`text-${index}`}>{part}</span>;
     });
   };
 
@@ -64,7 +64,7 @@ export default function PostCard({ post, onPostUpdate }) {
             <div className="flex flex-wrap gap-2 mb-4">
               {post.hashtags.map((hashtag, index) => (
                 <Link
-                  key={index}
+                  key={hashtag}
                   href={`/hashtag/${hashtag.slice(1)}`}
                   className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors"
                 >
@@ -77,8 +77,6 @@ export default function PostCard({ post, onPostUpdate }) {
           <div className="flex items-center space-x-4 pt-4 border-t border-gray-100">
             <LikeButton post={post} onLikeUpdate={handlePostUpdate} />
             <CommentSection post={post} onCommentUpdate={handlePostUpdate} />
-            
-      
           </div>
         </div>
       </div>
