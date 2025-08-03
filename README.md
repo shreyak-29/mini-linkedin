@@ -1,358 +1,202 @@
-# 🚀 Mini LinkedIn - Professional Community Platform
-# 🚀 Mini LinkedIn - Professional Community Platform
 
-A modern, LinkedIn-style community platform built with Next.js 14, featuring real-time posts, hashtag discovery, and professional networking capabilities.
-A modern, LinkedIn-style community platform built with Next.js 14, featuring real-time posts, hashtag discovery, and professional networking capabilities.
+# 🚀 Mini LinkedIn – Professional Community Platform
+
+A modern, LinkedIn-style community platform built with **Next.js 14**, featuring real-time post updates, hashtag discovery, user profiles, and professional networking capabilities.
+
+---
 
 ## 🛠️ Tech Stack
 
-### **Frontend**
-- **Next.js 15.4.5** - React framework with App Router
-- **React 19.1.0** - Latest React with concurrent features
-- **Tailwind CSS 4.0** - Utility-first CSS framework
-- **SWR** - Data fetching and caching
-- **date-fns** - Date formatting utilities
+### 🔹 Frontend
+- **Next.js 15.4.5** – React framework with App Router
+- **React 19.1.0** – Latest React with concurrent features
+- **Tailwind CSS 4.0** – Utility-first CSS framework
+- **SWR** – Data fetching and caching
+- **date-fns** – Lightweight date formatting utilities
 
-### **Backend**
-- **Next.js API Routes** - Serverless API endpoints
-- **MongoDB 8.17.0** - NoSQL database
-- **Mongoose** - MongoDB object modeling
-- **JWT** - JSON Web Token authentication
-- **bcryptjs** - Password hashing
+### 🔹 Backend
+- **Next.js API Routes** – Serverless API endpoints
+- **MongoDB 8.17.0** – NoSQL database
+- **Mongoose** – MongoDB object modeling
+- **JWT** – Secure authentication
+- **bcryptjs** – Password hashing
 
-## 📋 Features
-
-### 🔐 **Authentication System**
-- User registration and login
-- JWT token-based authentication
-- Persistent sessions with localStorage
-- Protected routes for authenticated users
-
-### 📝 **Post Management**
-- Create professional text posts
-- Real-time feed updates with SWR
-- Optimistic UI updates
-- Professional post cards with timestamps
-
-### 🏷️ **Hashtag System**
-- Automatic hashtag extraction from post text
-- Clickable hashtags that link to hashtag pages
-- Hashtag discovery pages showing related posts
-- Case-insensitive hashtag matching
-
-### 👤 **Profile Management**
-- View and edit personal profile
-- Bio editing functionality
-- View all user posts
-- Professional profile layout
-
-## 🚀 Setup Instructions
-
-### **1. Clone the Repository**
-```bash
-git clone <your-repo-url>
-cd mini-linkedin
-```
-### **Frontend**
-- **Next.js 15.4.5** - React framework with App Router
-- **React 19.1.0** - Latest React with concurrent features
-- **Tailwind CSS 4.0** - Utility-first CSS framework
-- **SWR** - Data fetching and caching
-- **date-fns** - Date formatting utilities
-
-### **Backend**
-- **Next.js API Routes** - Serverless API endpoints
-- **MongoDB 8.17.0** - NoSQL database
-- **Mongoose** - MongoDB object modeling
-- **JWT** - JSON Web Token authentication
-- **bcryptjs** - Password hashing
+---
 
 ## 📋 Features
 
-### 🔐 **Authentication System**
+### 🔐 Authentication System
 - User registration and login
-- JWT token-based authentication
-- Persistent sessions with localStorage
-- Protected routes for authenticated users
+- JWT-based authentication
+- Persistent sessions via `localStorage`
+- Protected routes for logged-in users
 
-### 📝 **Post Management**
+### 📝 Post Management
 - Create professional text posts
 - Real-time feed updates with SWR
-- Optimistic UI updates
-- Professional post cards with timestamps
-- Can view profile of those who posted 
+- Optimistic UI for better UX
+- Post cards with timestamps
+- Click user profile from post
 
-### 🏷️ **Hashtag System**
-- Automatic hashtag extraction from post text
-- Clickable hashtags that link to hashtag pages
-- Hashtag discovery pages showing related posts
-- Case-insensitive hashtag matching
+### 🏷️ Hashtag System
+- Auto-extract hashtags from posts
+- Clickable hashtags redirect to tag pages
+- Case-insensitive matching
+- Hashtag discovery with related posts
 
-### 👤 **Profile Management**
-- View and edit personal profile
-- Bio editing functionality
-- View all user posts
-- Professional profile layout
+### 👤 Profile Management
+- View and edit your profile
+- Update bio
+- View all your posts
+- Clean, professional layout
 
-###💬 **Like & Comment Functionality**
--View like count and comments on all posts
--Only logged-in users can like or comment
--Comments show relative time and update instantly
--Clean, responsive UI with form validation
+### 💬 Like & Comment System
+- Like and comment on posts
+- Comments update instantly (SWR)
+- Only authenticated users can interact
+- Relative time shown on all comments
 
+### 🎨 UI/UX Highlights
+- Responsive layout for mobile and desktop
+- Smooth animations and transitions
+- Professional, modern color scheme
+- Error and loading state handling
 
-
-
-
-
+---
 
 ## 🚀 Setup Instructions
 
-### **1. Clone the Repository**
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/shreyak-29/mini-linkedin
 cd mini-linkedin
-```
+````
 
-### **2. Install Dependencies**
+### 2. Install Dependencies
+
 ```bash
 npm install
 ```
-### **2. Install Dependencies**
-```bash
-npm install
-```
 
-### **3. Environment Setup**
-Create a `.env.local` file in the root directory:
+### 3. Environment Setup
+
+Create a `.env.local` file in the root:
 
 ```env
-# MongoDB Connection String
+# MongoDB
 MONGODB_URI=mongodb://localhost:27017/mini-linkedin
-# or for MongoDB Atlas:
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/mini-linkedin
+# Or use MongoDB Atlas
+# MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/mini-linkedin
 
-# JWT Secret (generate a secure random string)
-JWT_SECRET=your-super-secret-jwt-key-here
-```
-### **3. Environment Setup**
-Create a `.env.local` file in the root directory:
-
-```env
-# MongoDB Connection String
-MONGODB_URI=mongodb://localhost:27017/mini-linkedin
-# or for MongoDB Atlas:
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/mini-linkedin
-
-# JWT Secret (generate a secure random string)
-JWT_SECRET=your-super-secret-jwt-key-here
+# JWT
+JWT_SECRET=your-super-secure-jwt-secret-key
 ```
 
-### **4. Run Development Server**
-```bash
-npm run dev
-```
-### **4. Run Development Server**
+### 4. Run Development Server
+
 ```bash
 npm run dev
 ```
 
-### **5. Open Your Browser**
-Navigate to [http://localhost:3000](http://localhost:3000)
-### **5. Open Your Browser**
-Navigate to [http://localhost:3000](http://localhost:3000)
+### 5. Open Your Browser
 
-## 👥 Demo Users
+Navigate to: [http://localhost:3000](http://localhost:3000)
 
-You can create demo users or use these test accounts:
+---
 
-### **Demo User 1**
-- **Email**: `john@example.com`
-- **Password**: `password123`
-- **Name**: John Doe
+## 👤 Demo Users
 
-### **Demo User 2**
-- **Email**: `sarah@example.com`
-- **Password**: `password123`
-- **Name**: Sarah Wilson
+You can log in using these accounts:
 
-### **Demo User 3**
-- **Email**: `mike@example.com`
-- **Password**: `password123`
-- **Name**: Mike Johnson
+| Name         | Email                                         | Password    |
+| ------------ | --------------------------------------------- | ----------- |
+| John Doe     | [john@example.com](mailto:john@example.com)   | password123 |
+| Sarah Wilson | [sarah@example.com](mailto:sarah@example.com) | password123 |
+| Mike Johnson | [mike@example.com](mailto:mike@example.com)   | password123 |
+
+---
 
 ## 📱 Usage Guide
 
-### **Getting Started**
-1. **Register** a new account or **login** with demo credentials
-2. **Create posts** with hashtags like `#technology`, `#career`, `#networking`
-3. **Click on hashtags** to discover related posts
-4. **Edit your profile** and bio
-5. **Explore the community** feed
+### Getting Started
 
-### **Creating Posts**
-- Use the "Create Post" button in the navbar
-- Write your thoughts in the text area
-- Add hashtags with `#` symbol (e.g., `#technology #career`)
-- Posts are automatically categorized by hashtags
+1. Register or log in using demo credentials
+2. Create a post using `#hashtags`
+3. Click hashtags to explore related content
+4. Update your profile and bio
+5. Explore the community feed
 
-### **Discovering Content**
-- Click any hashtag in posts to see related content
-- Browse the main feed for all posts
-- Visit user profiles to see their posts
-- Use hashtag pages to find specific topics
+### Creating Posts
 
-## 🔧 API Endpoints
+* Use the **Create Post** button
+* Add hashtags like `#career`, `#networking`
+* Posts are auto-categorized by hashtags
 
-### **Authentication**
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
-- `GET /api/auth/me` - Get current user
+### Discovering Content
 
-### **Posts**
-- `GET /api/posts/get` - Get all posts
-- `POST /api/posts/create` - Create new post
-- `GET /api/posts/hashtag/[tag]` - Get posts by hashtag
+* Click hashtags to explore
+* Browse main feed
+* Visit user profiles
+* View posts filtered by hashtag
 
-### **Users**
-- `GET /api/users/[id]` - Get user posts
-- `PATCH /api/users/[id]` - Update user bio
-## 👥 Demo Users
-
-You can create demo users or use these test accounts:
-
-### **Demo User 1**
-- **Email**: `john@example.com`
-- **Password**: `password123`
-- **Name**: John Doe
-
-### **Demo User 2**
-- **Email**: `sarah@example.com`
-- **Password**: `password123`
-- **Name**: Sarah Wilson
-
-### **Demo User 3**
-- **Email**: `mike@example.com`
-- **Password**: `password123`
-- **Name**: Mike Johnson
-
-## 📱 Usage Guide
-
-### **Getting Started**
-1. **Register** a new account or **login** with demo credentials
-2. **Create posts** with hashtags like `#technology`, `#career`, `#networking`
-3. **Click on hashtags** to discover related posts
-4. **Edit your profile** and bio
-5. **Explore the community** feed
-
-### **Creating Posts**
-- Use the "Create Post" button in the navbar
-- Write your thoughts in the text area
-- Add hashtags with `#` symbol (e.g., `#technology #career`)
-- Posts are automatically categorized by hashtags
-
-### **Discovering Content**
-- Click any hashtag in posts to see related content
-- Browse the main feed for all posts
-- Visit user profiles to see their posts
-- Use hashtag pages to find specific topics
+---
 
 ## 🔧 API Endpoints
 
-### **Authentication**
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
-- `GET /api/auth/me` - Get current user
+### 🔐 Authentication
 
-### **Posts**
-- `GET /api/posts/get` - Get all posts
-- `POST /api/posts/create` - Create new post
-- `GET /api/posts/hashtag/[tag]` - Get posts by hashtag
+* `POST /api/auth/register` – Register new user
+* `POST /api/auth/login` – User login
+* `GET /api/auth/me` – Fetch current user
 
-### **Users**
-- `GET /api/users/[id]` - Get user posts
-- `PATCH /api/users/[id]` - Update user bio
+### 📝 Posts
+
+* `GET /api/posts/get` – Get all posts
+* `POST /api/posts/create` – Create a post
+* `GET /api/posts/hashtag/[tag]` – Posts by hashtag
+
+### 👤 Users
+
+* `GET /api/users/[id]` – Get user posts
+* `PATCH /api/users/[id]` – Update bio
+
+---
 
 ## 🚀 Deployment
 
-### **Vercel (Recommended)**
-### **Vercel (Recommended)**
+### ✅ Deploy on Vercel (Recommended)
 
 1. **Push to GitHub**
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
 
-2. **Deploy to Vercel**
-   - Connect your GitHub repository to Vercel
-   - Add environment variables in Vercel dashboard:
-     - `MONGODB_URI`: Your MongoDB connection string
-     - `JWT_SECRET`: Your secure JWT secret
-   - Add environment variables in Vercel dashboard:
-     - `MONGODB_URI`: Your MongoDB connection string
-     - `JWT_SECRET`: Your secure JWT secret
-   - Deploy automatically
-
-### **Environment Variables for Production**
-```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/mini-linkedin
-JWT_SECRET=your-super-secure-jwt-secret-key
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
 ```
 
-## 🎨 Extra Features
+2. **Connect to Vercel**
 
-### **UI/UX Features**
-### **Environment Variables for Production**
-```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/mini-linkedin
-JWT_SECRET=your-super-secure-jwt-secret-key
-```
+   * Link your GitHub repo
+   * Set the environment variables:
 
-## 🎨 Extra Features
+     ```env
+     MONGODB_URI=your-production-uri
+     JWT_SECRET=your-production-jwt
+     ```
 
-### **UI/UX Features**
-- Clean, modern LinkedIn-inspired design
-- Mobile-responsive layout
-- Loading states and empty states
-- Professional color scheme and typography
-- Smooth animations and transitions
-- Error handling with user-friendly messages
+3. **Deploy**
 
-### **Technical Features**
-- Global state management with UserContext
-- Optimistic UI updates
-- Real-time data fetching with SWR
-- Automatic hashtag extraction
-- Professional timestamp formatting
-- Secure authentication system
+   * Vercel will handle build & deployment automatically
 
-## 🐛 Troubleshooting
+---
 
-### **Common Issues**
+## 🛠 Development Commands
 
-1. **"Schema hasn't been registered" Error**
-   - Ensure MongoDB is running
-   - Check your `MONGODB_URI` environment variable
-   - Restart the development server
-
-2. **Hashtags not working**
-   - Check that posts contain hashtags with `#` symbol
-   - Verify the hashtag API route is working
-   - Clear browser cache
-
-3. **Authentication issues**
-   - Check JWT_SECRET environment variable
-   - Clear localStorage and try logging in again
-   - Verify API routes are working
-
-### **Development Commands**
 ```bash
 # Install dependencies
 npm install
 
-# Run development server
+# Run dev server
 npm run dev
 
 # Build for production
@@ -361,24 +205,40 @@ npm run build
 # Start production server
 npm start
 
-# Run linting
+# Linting
 npm run lint
 ```
 
-## 🤝 Contributing
+---
 
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
+## 🐛 Troubleshooting
 
-## 📄 License
+### Common Issues
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+1. **Schema not registered**
+
+   * MongoDB may not be running
+   * Check your `.env` config
+   * Restart the dev server
+
+2. **Hashtags not working**
+
+   * Make sure posts include hashtags
+   * Verify hashtag route is functional
+
+3. **Login fails**
+
+   * Ensure `JWT_SECRET` is valid
+   * Clear `localStorage` and try again
 
 ---
 
-**⭐ Star this repository if you found it helpful!**
 
-**Ready to deploy!** This project is fully configured for Vercel deployment and includes all necessary optimizations for production use.
+
+**⭐ Star this repo if you like the project!**
+**✅ Ready for deployment.**
+
+```
+
+Let me know if you'd like me to generate this as a downloadable file (`README.md`) or help with deployment to Vercel.
+```
