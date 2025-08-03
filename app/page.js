@@ -41,7 +41,7 @@ export default function HomePage() {
               </div>
               <div>
                 <p className="text-sm text-gray-600">Share your thoughts</p>
-                <p className="text-xs text-gray-500">What's on your mind?</p>
+                <p className="text-xs text-gray-500">What is on your mind?</p>
               </div>
             </div>
             <Link
