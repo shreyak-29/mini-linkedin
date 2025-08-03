@@ -3,6 +3,8 @@
 
 A modern, LinkedIn-style community platform built with **Next.js 14**, featuring real-time post updates, hashtag discovery, user profiles, and professional networking capabilities.
 
+## 🔗Deployed Link : https://mini-linkedin-taupe.vercel.app/
+
 ---
 
 ## 🛠️ Tech Stack
@@ -240,5 +242,5 @@ npm run lint
 
 ```
 
-Let me know if you'd like me to generate this as a downloadable file (`README.md`) or help with deployment to Vercel.
-```
+
+
