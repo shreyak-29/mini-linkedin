@@ -13,6 +13,16 @@ export default function HomePage() {
     refreshInterval: 30000, // Refresh every 30 seconds
   });
 
+  const handlePostUpdate = (updatedPost) => {
+    // Update the specific post in the SWR cache
+    mutate((currentPosts) => {
+      if (!currentPosts) return currentPosts;
+      return currentPosts.map(post => 
+        post._id === updatedPost._id ? updatedPost : post
+      );
+    }, false);
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
@@ -41,7 +51,7 @@ export default function HomePage() {
               </div>
               <div>
                 <p className="text-sm text-gray-600">Share your thoughts</p>
-                <p className="text-xs text-gray-500">What is on your mind?</p>
+                <p className="text-xs text-gray-500">What's on your mind?</p>
               </div>
             </div>
             <Link
@@ -88,7 +98,7 @@ export default function HomePage() {
           <div>
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Recent Posts</h2>
             {posts.map((post) => (
-              <PostCard key={post._id} post={post} />
+              <PostCard key={post._id} post={post} onPostUpdate={handlePostUpdate} />
             ))}
           </div>
         )}

@@ -9,6 +9,8 @@ export async function GET(req, { params }) {
     
     const posts = await Post.find({ author: id })
       .populate("author", "name")
+      .populate("likes", "name")
+      .populate("comments.userId", "name")
       .sort({ createdAt: -1 });
     
     return new Response(JSON.stringify(posts), { status: 200 });

@@ -54,6 +54,16 @@ export default function ProfilePage() {
     }
   };
 
+  const handlePostUpdate = (updatedPost) => {
+    // Update the specific post in the SWR cache
+    mutatePosts((currentPosts) => {
+      if (!currentPosts) return currentPosts;
+      return currentPosts.map(post => 
+        post._id === updatedPost._id ? updatedPost : post
+      );
+    }, false);
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
@@ -172,7 +182,7 @@ export default function ProfilePage() {
         {userPosts && userPosts.length > 0 && (
           <div className="space-y-4">
             {userPosts.map((post) => (
-              <PostCard key={post._id} post={post} />
+              <PostCard key={post._id} post={post} onPostUpdate={handlePostUpdate} />
             ))}
           </div>
         )}

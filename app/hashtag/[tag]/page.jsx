@@ -31,6 +31,14 @@ export default function HashtagPage({ params }) {
     fetchPosts();
   }, [tag]);
 
+  const handlePostUpdate = (updatedPost) => {
+    setPosts(currentPosts => 
+      currentPosts.map(post => 
+        post._id === updatedPost._id ? updatedPost : post
+      )
+    );
+  };
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-[400px]">
@@ -90,7 +98,7 @@ export default function HashtagPage({ params }) {
         {posts.length > 0 && (
           <div className="space-y-4">
             {posts.map((post) => (
-              <PostCard key={post._id} post={post} />
+              <PostCard key={post._id} post={post} onPostUpdate={handlePostUpdate} />
             ))}
           </div>
         )}
