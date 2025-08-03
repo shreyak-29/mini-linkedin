@@ -112,9 +112,9 @@ export default function PublicProfilePage({ params }) {
               <div>
                 <span className="font-semibold">{totalLikes}</span> total likes received
               </div>
-              <div>
+              {/* <div>
                 Member since {formatDistanceToNow(new Date(user.createdAt), { addSuffix: true })}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
